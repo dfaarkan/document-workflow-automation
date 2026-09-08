@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "document-workflow-automation"
+version = "0.1.0"
+description = "A standard library CLI for rules-based document intake automation"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {file = "LICENSE"}
+authors = [{name = "Daffa Arkan Naufal Riyanto"}]
+keywords = ["automation", "documents", "workflow", "cli"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+dependencies = []
+
+[project.scripts]
+document-workflow = "document_workflow.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

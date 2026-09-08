@@ -1,0 +1,17 @@
+{
+  "fallback": "other",
+  "categories": [
+    {
+      "name": "finance",
+      "keywords": ["invoice", "payment", "expense"]
+    },
+    {
+      "name": "legal",
+      "keywords": ["contract", "agreement", "terms"]
+    },
+    {
+      "name": "people",
+      "keywords": ["candidate", "onboarding", "employee"]
+    }
+  ]
+}
