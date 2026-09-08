@@ -1,8 +1,10 @@
 # Document Workflow Automation
 
-A practical Python CLI that turns a mixed document intake folder into a predictable, auditable category structure. It recursively discovers files, extracts normalized text from supported formats, applies ordered keyword rules, copies source files safely, and produces JSON and CSV manifests.
+A small educational Python CLI that turns a mixed text-document folder into a predictable category structure. It recursively discovers supported files, extracts normalized text, applies ordered keyword rules, copies source files, and produces JSON and CSV manifests.
 
 The project uses only the Python standard library at runtime and in tests.
+
+This repository was created as an AI-assisted educational portfolio exercise. All files under `samples/` are invented fixtures written only to demonstrate classification behavior. They are not invoices, contracts, applicant records, projects, or business documents from a real organization. The tool has not been presented here as a deployed production workflow.
 
 ## What it does
 
@@ -107,6 +109,10 @@ Rules are checked before scanning begins. Categories are evaluated from top to b
 
 Category and fallback names must be single safe folder names. Absolute paths, separators, `.` and `..` are rejected.
 
+## About the sample data
+
+The names `INV-1042`, `Maya`, and `Project Aurora`, plus the service-contract text and sample PDF, are fictional. Their short contents intentionally include or omit keywords from `samples/rules.json` so a reader can reproduce each category outcome. They do not represent prior employment, clients, transactions, or operational records.
+
 ## Verified demo
 
 Running the quickstart command against the included sample input produced:
@@ -149,9 +155,9 @@ Keep sensitive manifests protected because source names, destination names, cate
 - The CLI requires the output directory to be outside the scanned input directory.
 - Existing destination names cause the next available numeric suffix to be selected.
 
-## Development method
+## Project provenance
 
-Features were built with `unittest` using test-first RED, GREEN, and refactor cycles. Actual command output from those cycles is preserved in [`docs/tdd-evidence.md`](docs/tdd-evidence.md).
+The implementation and tests were produced as an AI-assisted learning exercise. The repository contains one initial implementation commit and does not claim that its Git history proves a user-led RED, GREEN, and refactor sequence. The included tests verify current behavior only.
 
 ## License
 
